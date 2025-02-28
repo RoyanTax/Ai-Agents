@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agents Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="createView" class="view">
+            <h2>Create New Agent</h2>
+            <form id="agentForm">
+                <input type="text" id="agentName" placeholder="Agent Name" required>
+                <textarea id="rolePrompt" placeholder="Role Prompt" required></textarea>
+                <textarea id="description" placeholder="Description"></textarea>
+                <input type="file" id="avatar" accept="image/*" required>
+                <button type="submit">Create Agent</button>
+            </form>
+        </div>
+
+        <div id="agentsView" class="view active">
+            <h2>AI Agents</h2>
+            <div id="agentsList" class="agents-grid"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <button onclick="showView('create')">Create</button>
+        <button onclick="showView('agents')">Agents</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
